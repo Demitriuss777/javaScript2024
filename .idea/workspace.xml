@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc240347-59ed-4746-88b8-46975583846c" name="Changes" comment="Home4 function">
+      <change afterPath="$PROJECT_DIR$/Homework/Homr5Function2/Home5Function2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homework/Homr5Function2/mapn5.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homework/Home4Function1/main4.js" beforeDir="false" afterPath="$PROJECT_DIR$/Homework/Home4Function1/main4.js" afterDir="false" />
     </list>
@@ -70,7 +72,7 @@
       <workItem from="1708857365856" duration="9384000" />
       <workItem from="1708973369728" duration="5901000" />
       <workItem from="1709150182454" duration="8401000" />
-      <workItem from="1709326379391" duration="3210000" />
+      <workItem from="1709326379391" duration="9469000" />
     </task>
     <task id="LOCAL-00001" summary="Home1">
       <created>1708620720328</created>
@@ -111,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709158596875</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Home4 function">
+      <option name="closed" value="true" />
+      <created>1709416845124</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1709416845125</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

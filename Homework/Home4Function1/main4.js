@@ -72,7 +72,7 @@ function createLiWithArgument(text,namberLi){
 
 }
 
-console.log(createLiWithArgument('hello',9))
+createLiWithArgument('hello',9)
 
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві),
 // та будує для них список
@@ -150,19 +150,31 @@ console.log(summ(sum));
 // Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
 let swa=[11,22,33,44] //=> [22,11,33,44]
 function swap(arr,index1,index2) {
-    index1 = arr[0];
-    index2=arr[1]
-    arr[0] = index2;
-    arr[1]=index1
+    const naber1 = arr[index1]
+    const namber2 = arr[index2]
+    arr[index1] = namber2;
+    arr[index2] = naber1;
     return arr
 }
 
 console.log(swap(swa,3,0))
 // - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
 // Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250
-function exchange(sumUAH,currencyValues,exchangeCurrency){
-    let resultat= sumUAH/exchangeCurrency
-return resultat  +` ${currencyValues}`
+
+function exchange(sumUAH, currencyValues, exchangeCurrency) {
+let resultatV = 0;
+
+for (const i of currencyValues) {
+    if (i.currency === exchangeCurrency) {
+        resultatV=sumUAH/i.value;
+
+    }
+}return resultatV
+
 }
 
-console.log(exchange(10000, 'USD', 40));
+let bablo = [
+    {currency: 'USD', value: 40},
+    {currency: 'EUR', value: 42}
+];
+console.log(exchange(40000,bablo,'USD'))
