@@ -115,6 +115,16 @@ const Summa=(arr)=>{
 
 }
 console.log(Summa(min))
+ function sumNum(arr){
+     let firstSum = 0;
+     for (let i = 0; i < arr.length; i++) {
+
+         firstSum = firstSum + arr[i];
+
+     }return firstSum
+ }
+
+console.log(sumNum(min))
 // - створити функцію swap(arr,index1,index2).
 // Функція міняє місцями заняення у відаовідних індексах
 // Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
