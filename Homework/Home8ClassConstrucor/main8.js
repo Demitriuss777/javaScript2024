@@ -169,7 +169,7 @@ cartwo.addDriver({name:
 cartwo.info()
 
 
-/////  я це завдання дороблю на вихідних
+/////
 // -створити класс/функцію конструктор попелюшка з полями ім'я, вік,
 // розмір ноги. Створити масив з 10 попелюшок.
 class Cinderella  {
@@ -184,16 +184,16 @@ class Cinderella  {
 
 
  let princesses = [
-    new Cinderella('Alla', 22, 36),
-    new Cinderella('Alla', 22, 36),
-    new Cinderella('Alla', 22, 36),
-    new Cinderella('Alla', 22, 36),
-    new Cinderella('Alla', 22, 36),
-    new Cinderella('Alla', 22, 36),
-    new Cinderella('Alla', 22, 36),
-    new Cinderella('Alla', 22, 36),
-    new Cinderella('Alla', 22, 36),
-    new Cinderella('Alla', 22, 36)];
+    new Cinderella('Alla', 22, 31),
+    new Cinderella('Anja', 23, 32),
+    new Cinderella('Alina', 24, 33),
+    new Cinderella('Ayna', 25, 34),
+    new Cinderella('Alisa', 32, 35),
+    new Cinderella('Oklena', 34, 35),
+    new Cinderella('Olya', 44, 36),
+    new Cinderella('Inna', 21, 37),
+    new Cinderella('Ira', 28, 27),
+    new Cinderella('Ilonna', 29, 42)];
 // Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
 
    class Prince{
@@ -206,7 +206,22 @@ class Cinderella  {
        }
 
        }
-
+let hero =[ new Prince('Dima', 37,37)]
 
 //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
-//     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
+let bride=[]
+for (const itemCidne of princesses) {
+    for (const itemHero of hero) {
+        if (itemCidne.footSize === itemHero.bootSize) {
+            bride.push(itemCidne);
+            console.log(`Принц ${itemHero.name} знайшов свою дружину ${itemCidne.name}`)
+        }
+    }}
+
+
+
+//     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та
+//     відповідного колбеку
+
+let findCinderella = princesses.find((item) => item.footSize === hero[0].bootSize);
+console.log(findCinderella);
