@@ -42,7 +42,23 @@ e.preventDefault()
 
 let sessions = JSON.parse(localStorage.getItem('sessions')) || [];
 sessions.push(new Date());
+//розгорнутий варіант
+// let date = new Date();
+// sessions.push({
+//     day: date.getDate(),
+//     hour: date.getHours(),
+//     minutes: date.getMinutes(),
+//     seconds: date.getSeconds()
+// });
 localStorage.setItem('sessions', JSON.stringify(sessions));
+let ul = document.getElementById('sessions');
+for (const item of sessions) {
+    let li = document.createElement('li');
+    li.innerText = item;
+    // li.innerText= item.day+' '+item.hour+' '+ item.minutes+' '+ item.seconds
+    ul.appendChild(li)
+
+}
 
 // ========================= 4
 //     зробити масив на 100 об'єктів та дві кнопки prev next
@@ -772,23 +788,48 @@ let forms2 = document.form2
 forms2.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    if (Number(this.verification.value) > 18) {
-        message.innerText = 'Приємного перегляду';
-    } else {
-        message.innerText = 'Шкода, треба почекати до 18 років';
-    }
+    // if (Number(this.verification.value) > 18) {
+    //     message.innerText = 'Приємного перегляду';
+    // } else {
+    //     message.innerText = 'Шкода, треба почекати до 18 років';
+    // }
+    if (JSON.parse(this.verification.value) > 18) {
 
+        return alert('Приємного перегляду');
+    }
+    return alert('Шкода, треба почекати до 18 років');
 });
 
 
 
 
 
-//
+//                            7
 // *** Створити 3 інпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
 // (Додатковачастина для завдання)
 //
+
+// let forms7 = document.form7;
+// let indoRows = Number(this.row.value);
+// let infoCell = Number(this.cell.value);
+// let information = JSON.parse(this.infos.value);
+// let conter7 = document.createElement('div');
+//
+// for (let i = 0; i < indoRows.length; i++) {
+//     const tr = document.createElement('tr');
+//
+//     for (let i = 0; i < infoCell.length; i++) {
+//         const td = document.createElement('td');
+//         td.innerText = information;
+//         tr.appendChild(td);
+//     }
+//   conter7.appendChild(tr);
+//
+// }
+//
+
+
 // *** (подібне було вище, але...будьте уважні в другій частині) створити сторінку з довільним блоком, в середині якого є значення "100грн"
 // при перезавантаженні сторінки до значаення додається по 10грн, але !!!
 //     зміна ціни відбувається тільки на перезавантаження, які відбулись пізніше ніж 10 секунд після попереднього.
