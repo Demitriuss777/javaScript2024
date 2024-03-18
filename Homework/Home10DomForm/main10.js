@@ -58,9 +58,10 @@ for (const item of sessions) {
     // li.innerText= item.day+' '+item.hour+' '+ item.minutes+' '+ item.seconds
     ul.appendChild(li)
 
+
 }
 
-// ========================= 4
+// ========================= 4  не працює (спробувати через функцію)
 //     зробити масив на 100 об'єктів та дві кнопки prev next
 // при завантажені сторінки з'являються перші 10 об'єктів.
 //     При натисканні next виводяться настпні 10 об'єктів
@@ -758,12 +759,36 @@ let locations = [
 ];
 
 console.log(locations.length) //172 об'єктів
-    let div=document.getElementsByClassName('10Object')
+    let divs=document.getElementsByClassName('10Object')
     let prevBtn = document.getElementById('butt4prev');
     let nextBtn = document.getElementById('butt4next');
-let limit=10
-let start=0
-
+let start = 0;
+let step = 10;
+let limit = start + step;
+nextBtn.onclick = function () {
+for (let i = start; i < limit; i++) {
+    let titles = document.createElement('div');
+   let types = document.createElement('div');
+    if (i < locations.length){
+    console.log(locations[i])}
+    // titles.innerText = `Title: ${locations[i].title}`;
+    // types.innerText = `Type: ${locations[i].type}`;
+    // divs.append(titles, types);
+} start = limit;
+    limit = limit + step;
+}
+prevBtn.onclick = function () {
+    for (let i = start; i < limit; i++) {
+        let titles = document.createElement('div');
+        let types = document.createElement('div');
+        if (i < locations.length){
+            console.log(locations[i])}
+        // titles.innerText = `Title: ${locations[i].title}`;
+        // types.innerText = `Type: ${locations[i].type}`;
+        // divs.append(titles, types);
+    } start = limit;
+    limit = limit - step;
+}
 // 5
 // - Створити довільний елемент з id = text та створити кнопку.Використовуючи JavaScript,
 // зробіть так, щоб при натисканні на кнопку зникав елемент з id="text".
@@ -810,24 +835,25 @@ forms2.addEventListener('submit', function (e) {
 // (Додатковачастина для завдання)
 //
 
-// let forms7 = document.form7;
-// let indoRows = Number(this.row.value);
-// let infoCell = Number(this.cell.value);
-// let information = JSON.parse(this.infos.value);
-// let conter7 = document.createElement('div');
-//
-// for (let i = 0; i < indoRows.length; i++) {
-//     const tr = document.createElement('tr');
-//
-//     for (let i = 0; i < infoCell.length; i++) {
-//         const td = document.createElement('td');
-//         td.innerText = information;
-//         tr.appendChild(td);
-//     }
-//   conter7.appendChild(tr);
-//
-// }
-//
+let forms7 = document.form7;
+let indoRows = Number(this.row.value);
+let infoCell = Number(this.cell.value);
+let information = Number(this.infos.value);
+let conter7 = document.createElement('div');
+form.onsubmit = function (e) {
+    e.preventDefault();
+for (let i = 0; i < indoRows.length; i++) {
+    const tr = document.createElement('tr');
+
+    for (let i = 0; i < infoCell.length; i++) {
+        const td = document.createElement('td');
+        td.innerText = information;
+        tr.appendChild(td);
+    }
+  conter7.appendChild(tr);
+
+} document.body.appendChild(conter7)}
+
 
 
 // *** (подібне було вище, але...будьте уважні в другій частині) створити сторінку з довільним блоком, в середині якого є значення "100грн"
