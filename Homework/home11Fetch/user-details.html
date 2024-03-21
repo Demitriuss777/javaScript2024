@@ -17,7 +17,7 @@
     console.log(url);
     let id = url.searchParams.get("id");
     console.log(id)
-    fetch(' http://jsonplaceholder.typicode.com/users/'+ id)
+    fetch('http://jsonplaceholder.typicode.com/users/'+ id)
         .then(value => value.json())
         .then(value => {
             console.log(value);
@@ -33,11 +33,7 @@
             Street: ${value.address.street}
               Suite: ${value.address.suite}
             Website : ${value.website}
-
-
-
             `
-
             div.append(h2);
             document.body.append(div)
 
