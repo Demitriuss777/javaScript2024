@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>user-details</title>
+</head>
+<body>
+<!--// при кліку на посилання перехід на відповідну сторінку, на якій буде вся інформація про-->
+<!--// користувача (всі 15 полів)-->
+<!--// отримана через додатковий запит (https://jsonplaceholder.typicode.com/users/XXX-->
+<!--// де ХХХ - айді користувача)користувача-->
+<script>
+    let url = new URL(location.href);
+    console.log(url);
+    let id = url.searchParams.get("id");
+    console.log(id)
+    fetch(' http://jsonplaceholder.typicode.com/users/'+ id)
+        .then(value => value.json())
+        .then(value => {
+            console.log(value);
+            div = document.createElement('div');
+            let h2 = document.createElement('h2');
+            h2.innerText = `
+            ${value.id}
+            Name: ${value.name}
+            User name: ${value.username}
+            Phone: ${value.phone}
+            Address :
+            City ${value.address.city}
+            Street: ${value.address.street}
+              Suite: ${value.address.suite}
+            Website : ${value.website}
+
+
+
+            `
+
+            div.append(h2);
+            document.body.append(div)
+
+        })
+
+
+
+</script>
+</body>
+</html>

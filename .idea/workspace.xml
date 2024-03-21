@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc240347-59ed-4746-88b8-46975583846c" name="Changes" comment="10">
+      <change afterPath="$PROJECT_DIR$/Homework/home11Fetch/home11Fetch.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homework/home11Fetch/main11.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homework/home11Fetch/user-details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homework/Home10DomForm/main10.js" beforeDir="false" afterPath="$PROJECT_DIR$/Homework/Home10DomForm/main10.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,10 +51,18 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\demit\Desktop\работа\програм\intellij\javaScript2024\Homework\home11Fetch" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -77,7 +87,11 @@
       <workItem from="1710361749366" duration="17044000" />
       <workItem from="1710621159126" duration="4137000" />
       <workItem from="1710630670986" duration="17838000" />
-      <workItem from="1710780415827" duration="12345000" />
+      <workItem from="1710780415827" duration="12367000" />
+      <workItem from="1710806144120" duration="208000" />
+      <workItem from="1711051665282" duration="3179000" />
+      <workItem from="1711054889122" duration="5525000" />
+      <workItem from="1711060600253" duration="1722000" />
     </task>
     <task id="LOCAL-00001" summary="Home1">
       <created>1708620720328</created>
@@ -190,7 +204,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710800530834</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="10">
+      <option name="closed" value="true" />
+      <created>1710805871994</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1710805871994</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
