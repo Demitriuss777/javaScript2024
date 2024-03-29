@@ -15,7 +15,12 @@ const url = new URL(location.href);
 /*console.log(url);*/
 const Idi= url.searchParams.get('id')
 console.log(Idi);
-
+const mainConter=document.createElement('div')
+mainConter.classList.add('main3')
+document.body.appendChild(mainConter)
+const posyConter=document.createElement('div')
+posyConter.classList.add('postt');
+mainConter.appendChild(posyConter)
 fetch('https://jsonplaceholder.typicode.com/posts/' + Idi)
     .then(value => value.json())
     .then(posts => {
@@ -24,9 +29,10 @@ fetch('https://jsonplaceholder.typicode.com/posts/' + Idi)
             const div1 = document.createElement('div');
             div1.classList.add('xxx')
             div1.innerText = `${item} :  ${posts[item]}`
-            document.body.appendChild(div1);
+           posyConter.appendChild(div1)
         }
     });
+
 
 
 
@@ -36,7 +42,7 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${Idi}/comments`)
         console.log(comments)
         for (const item in comments) {
             const comtntDiv= document.createElement('div')
-            comtntDiv.classList.add('rrr')
+            comtntDiv.classList.add('coment')
             if (typeof comments[item] !=='object') {
                 comtntDiv.innerText = `${item} ${comments[item]}`
             } else {
@@ -53,8 +59,12 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${Idi}/comments`)
 
             }
 
-            document.body.appendChild(comtntDiv)
+          mainConter.appendChild(comtntDiv)
 
         }
 
     });
+//     post-details.html - блок з інфою про пост зверху.
+//     Коментарі - по 4 в ряд.
+//     Всі елементи котрі характеризують users, posts, comments візуалізувати,
+//     так, щоб було видно що це блоки (дати фон. марджини і тд)тд

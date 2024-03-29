@@ -1,8 +1,8 @@
 
 // На странице user-details.html:
 // 4 Вивести всю, без виключення, інформацію про об'єкт user на який клікнули
-
-
+const main1=document.createElement('div')
+document.body.appendChild(main1)
 const url =new  URL(location.href)
 /*console.log(url);*/
 const Id = url.searchParams.get('id')/*
@@ -41,7 +41,7 @@ fetch('https://jsonplaceholder.typicode.com/users/'+Id)
                 }
 
             }
-            document.body.appendChild(divUser)
+            main1.appendChild(divUser)
 
         }
 
@@ -53,18 +53,18 @@ fetch('https://jsonplaceholder.typicode.com/users/'+Id)
 //     6 Каждому посту додати кнопку/посилання, при кліку на яку відбувається перехід на сторінку post-details.html,
 //     котра має детальну інфу про поточний пост.
 //
-
+const  divbtn=document.createElement('div')
 const btn = document.createElement('button');
 btn.innerText='post of current user'
 btn.classList.add('ddd');
+divbtn.appendChild(btn)
+document.body.appendChild(divbtn)
 
-document.body.appendChild(btn)
-
-
+const main2=document.createElement('div')
+main2.classList.add('mainn2')
+document.body.appendChild(main2)
 
 btn.onclick=function () {
-
-
     fetch(`https://jsonplaceholder.typicode.com/users/${Id}/posts`)
         .then(value => value.json())
         .then(value => {
@@ -83,7 +83,8 @@ btn.onclick=function () {
 
                 title.append(ult,a);
 
-                document.body.appendChild(title)
+
+                main2.appendChild(title)
 
             }
 
@@ -97,8 +98,8 @@ btn.onclick=function () {
 
 // Стилизація проєкта -
 //
-//     user-details.html - блок з інфою про user зверху сторінки. Кнопка нижчє,
-//     на 90% ширини сторінки, по центру.
+//     user-details.html - блок з інфою про user зверху сторінки.
+//     Кнопка нижчє, на 90% ширини сторінки, по центру.
 //     блоки з короткою іфною про post - в ряд по 5 .
 //
 
